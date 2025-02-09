@@ -1,0 +1,105 @@
+/* Base S
+tyles */
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  background-color: #ffebee;
+  margin: 0;
+  padding: 0;
+}
+
+/* Container with Fade-In */
+.container {
+  margin-top: 100px;
+  padding: 20px;
+  animation: fadeIn 1s ease-out;
+}
+
+/* Fade-In Keyframes */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Fade-Out Keyframes (used on page exit) */
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+/* Heartbeat Animation for the Title on no1.html */
+.heartbeat {
+  animation: heartbeat 1.5s infinite;
+}
+
+@keyframes heartbeat {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+}
+
+/* Celebrate Animation for the Final Yes Page */
+.celebrate {
+  animation: celebrate 2s ease-in-out;
+}
+
+@keyframes celebrate {
+  0% {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  50% {
+    transform: scale(1.05);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* Additional Fade-In for Titles on Other Pages */
+.fadeIn {
+  animation: fadeIn 1s ease-out;
+}
+
+/* Element Styles */
+h1 {
+  color: #d32f2f;
+}
+
+input {
+  padding: 10px;
+  margin: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+button, .btn a {
+  padding: 10px 20px;
+  margin: 10px;
+  text-decoration: none;
+  color: #fff;
+  background-color: #e91e63;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover, .btn a:hover {
+  background-color: #c2185b;
+  transform: scale(1.05);
+}

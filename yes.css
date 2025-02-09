@@ -1,0 +1,112 @@
+/* Base Styles for yes.html */
+body {
+  font-family: 'Arial', sans-serif;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  /* A pulsing gradient background */
+  background: linear-gradient(45deg, #ffebee, #f8bbd0);
+  animation: backgroundPulse 10s infinite alternate;
+}
+
+.container {
+  max-width: 600px;
+  margin: 50px auto;
+  padding: 20px;
+}
+
+/* Title Animation */
+.celebrate {
+  color: #d32f2f;
+  animation: celebrate 2s ease-in-out;
+}
+
+@keyframes celebrate {
+  0% {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  50% {
+    transform: scale(1.1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* Confession Container */
+#confession-container {
+  margin-top: 30px;
+  font-size: 1.5em;
+  color: #d32f2f;
+  min-height: 100px;
+  opacity: 0;
+}
+
+/* “Out-of-This-World” Confession Animation */
+#confession-container.animate {
+  animation: confessionAnimation 2s ease-out forwards;
+}
+
+@keyframes confessionAnimation {
+  0% {
+    opacity: 0;
+    transform: translateY(50px) scale(0.5) rotate(-15deg);
+    text-shadow: 0 0 0 rgba(0, 0, 0, 0);
+  }
+  50% {
+    opacity: 1;
+    transform: translateY(0) scale(1.2) rotate(0deg);
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.4);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1) rotate(0deg);
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
+  }
+}
+
+/* Background Pulse Animation */
+@keyframes backgroundPulse {
+  from {
+    background: linear-gradient(45deg, #ffebee, #f8bbd0);
+  }
+  to {
+    background: linear-gradient(45deg, #fce4ec, #f48fb1);
+  }
+}
+
+/* Interactive Section Styling */
+#interactive-section {
+  margin-top: 40px;
+}
+
+/* Heart Icon Styling */
+#heartIcon {
+  width: 100px;
+  height: auto;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+#heartIcon:hover {
+  transform: scale(1.1);
+}
+
+/* Cat GIF Styling */
+#catGif {
+  width: 150px;
+  height: auto;
+  margin-top: 20px;
+  display: none; /* Hidden by default */
+  animation: catFade 2s ease-in-out;
+}
+
+@keyframes catFade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
